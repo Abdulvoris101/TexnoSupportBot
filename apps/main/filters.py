@@ -20,7 +20,7 @@ class IsUser(BoundFilter):
 
 
 
-class IsReplyFilter(BoundFilter):
+class IsReply(BoundFilter):
     async def check(self, message: types.Message) -> bool:
         if message.reply_to_message is not None:
             if message.reply_to_message.from_id != int(USER_ID):
