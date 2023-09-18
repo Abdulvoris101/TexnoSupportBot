@@ -1,7 +1,3 @@
-# TexnoSupport Telegram Bot
-
-![TexnoSupport Logo](texnosupport_logo.png)
-
 ## Introduction
 
 The TexnoSupport Telegram Bot is a versatile and user-friendly bot designed to connect two users in a live chat, similar to the popular Livegram bot. With TexnoSupport, you can easily provide live support, assistance, or engage in one-on-one conversations directly within the Telegram platform.
