@@ -11,8 +11,9 @@ load_dotenv()
 
 app = FastAPI()
 
-WEBHOOK_PATH = f"/bot/{os.environ.get('BOT_TOKEN')}"
+WEBHOOK_PATH = f"/bot/2/{os.environ.get('BOT_TOKEN')}"
 WEBHOOK_URL = os.environ.get("WEB_URL") + WEBHOOK_PATH
+
 
 @app.on_event("startup")
 async def on_startup():
@@ -22,6 +23,7 @@ async def on_startup():
         await bot.set_webhook(
             url=WEBHOOK_URL
         )
+
 
 @app.post(WEBHOOK_PATH)
 async def bot_webhook(update: dict):

@@ -11,13 +11,11 @@ class IsAdmin(BoundFilter):
         return int(message.chat.id) == int(USER_ID)
 
 
-
 class IsUser(BoundFilter):
     key = 'is_user'
 
     async def check(self, message: types.Message) -> bool:
         return int(message.chat.id) != int(USER_ID)
-
 
 
 class IsReply(BoundFilter):
