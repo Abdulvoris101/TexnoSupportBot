@@ -27,6 +27,8 @@ async def answer_to_client(message: types.Message):
     try:
         await bot.send_message(chat_id, message.text)
         await message.answer("Yuborildi!")
-    except:
+    except Exception as e:
+        print("An exception occurred:", e)
+        await bot.send_message(USER_ID, str(e))
         await message.answer("Xatolik!")
 
